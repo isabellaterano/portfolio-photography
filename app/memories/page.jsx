@@ -7,7 +7,7 @@ import image4 from "@/public/abandoned4.jpg";
 const Memories = () => {
   return (
     <>
-      <section className="flex flex-col items-center p-4 md:p-8">
+      <section className="flex flex-col items-center p-4 md:p-8 mt-20">
         <div className="w-full flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 md:space-x-4">
           <div className="w-full md:w-1/2 p-2">
             <Image
@@ -15,7 +15,7 @@ const Memories = () => {
               alt="Horizontal Image"
               width={500}
               height={300}
-              className="object-cover rounded-lg shadow-md w-auto"
+              className="object-cover rounded-lg shadow-md w-full h-auto"
               priority
             />
           </div>
@@ -25,13 +25,13 @@ const Memories = () => {
               alt="Vertical Image"
               width={300}
               height={500}
-              className="object-cover rounded-lg shadow-md w-auto"
+              className="object-cover rounded-lg shadow-md w-full h-auto"
               priority
             />
           </div>
         </div>
         <div className="mt-4 text-center">
-          <p className="text-lg md:text-xl lg:text-2xl font-semibold">
+          <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed">
             In the heart of every abandoned place lies a silent story, waiting
             to be told. Through my lens, I capture the haunting beauty of these
             forsaken spaces, revealing the echoes of the past and the silent
@@ -47,7 +47,7 @@ const Memories = () => {
               alt="Image 1"
               width={500}
               height={300}
-              className="object-cover rounded-lg shadow-md w-auto"
+              className="object-cover rounded-lg shadow-md w-full h-auto"
               priority
             />
           </div>
@@ -57,13 +57,13 @@ const Memories = () => {
               alt="Image 2"
               width={500}
               height={300}
-              className="object-cover rounded-lg shadow-md w-auto"
+              className="object-cover rounded-lg shadow-md w-full h-auto"
               priority
             />
           </div>
         </div>
         <div className="mt-4 text-center">
-          <p className="text-lg md:text-xl lg:text-2xl font-semibold">
+          <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed">
             I invite you to step into these forgotten worlds and witness the
             silent stories they hold. Each photograph is a tribute to the
             resilience of these structures and the fleeting nature of human

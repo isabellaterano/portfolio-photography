@@ -1,51 +1,41 @@
-import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaBehance, FaFacebook, FaInstagram } from "react-icons/fa";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="border-t-4 border-stone-100 py-8">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-4 md:mb-0">
-          <h1 className="text-xl font-bold">My Photography Portfolio</h1>
-          <p className="text-gray-400">© 2024 All rights reserved.</p>
+    <footer className="bg-zinc-900 text-zinc-50 py-8">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="text-center md:text-left">
+          <h3 className="text-lg font-semibold">Jasper Everett Photography</h3>
+          <p className="text-sm mt-1">Capturing moments, creating memories.</p>
         </div>
-        <nav className="flex space-x-4">
-          <Link href="/about" className="hover:underline">
-            About
-          </Link>
-          <Link href="/contact" className="hover:underline">
-            Contact
-          </Link>
-          <Link href="/portfolio" className="hover:underline">
-            Portfolio
-          </Link>
-        </nav>
+        <div className="mt-4 md:mt-0 flex space-x-6">
+          <a
+            href="#"
+            className="text-gray-400 hover:text-white"
+            whileHover={{ scale: 1.1 }}
+          >
+            <FaInstagram className="w-6 h-6" />
+          </a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-white"
+            whileHover={{ scale: 1.1 }}
+          >
+            <FaBehance className="w-6 h-6" />
+          </a>
+          <a
+            href="#"
+            className="text-gray-400 hover:text-white"
+            whileHover={{ scale: 1.1 }}
+          >
+            <FaFacebook className="w-6 h-6" />
+          </a>
+        </div>
       </div>
-      <div className="mt-4 flex justify-center space-x-4">
-        <Link
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFacebook alt="Facebook" className="h-6 w-6" />
-        </Link>
-        <Link
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram className="h-6 w-6" />
-        </Link>
-        <Link
-          href="https://twitter.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTwitter alt="Twitter" className="h-6 w-6" />
-        </Link>
+      <div className="text-center mt-8 text-gray-500 text-sm">
+        © {new Date().getFullYear()} Jasper Everett Photography. All rights
+        reserved.
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

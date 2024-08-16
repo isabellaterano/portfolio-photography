@@ -1,32 +1,43 @@
 import Image from "next/image";
 import profile from "@/public/profile.jpg";
 
-const About = () => {
+export default function About() {
   return (
-    <div className="flex flex-col items-center justify-center h-96">
-      <div className="max-w-4xl px-4">
-        <div className="flex justify-center">
-          <div className="relative w-40 h-40">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-4xl w-full flex flex-col md:flex-row">
+        <div className="md:w-1/3">
+          <div className="overflow-hidden rounded-lg">
             <Image
               src={profile}
-              alt="Photographer"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full"
+              alt="Jasper Everett"
+              width={300}
+              height={300}
+              className="object-cover rounded-lg"
             />
           </div>
         </div>
-        <h1 className="text-3xl font-bold mb-4 text-center my-4">About Me</h1>
-        <p className="text-lg leading-relaxed">
-          I am a passionate photographer dedicated to capturing moments and
-          creating memories. With years of experience in the field, I specialize
-          in portrait, landscape, and event photography. My goal is to deliver
-          stunning visuals that resonate with viewers and leave a lasting
-          impression.
-        </p>
+        <div className="md:w-2/3 md:pl-8 mt-6 md:mt-0">
+          <h2 className="text-3xl font-semibold text-gray-800">About Me</h2>
+          <p className="text-gray-600 mt-4">
+            Hi, I’m Jasper Everett, a passionate photographer with a love for
+            capturing life's most beautiful moments. I specialize in portrait,
+            landscape, and event photography. My journey into photography began
+            at a young age, and over the years, I’ve developed a unique style
+            that blends creativity with technical expertise.
+          </p>
+          <p className="text-gray-600 mt-4">
+            Through my lens, I aim to tell stories that resonate with people and
+            evoke emotions. Whether it’s a candid shot or a meticulously planned
+            portrait, I strive to create images that are not just visually
+            stunning but also meaningful.
+          </p>
+          <p className="text-gray-600 mt-4">
+            When I’m not behind the camera, I enjoy exploring new places,
+            meeting new people, and continuously learning to hone my craft.
+            Let’s connect and create something beautiful together!
+          </p>
+        </div>
       </div>
     </div>
   );
-};
-
-export default About;
+}

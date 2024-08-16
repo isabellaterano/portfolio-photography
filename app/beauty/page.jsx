@@ -7,19 +7,19 @@ import image4 from "@/public/people4.jpg";
 const Beauty = () => {
   return (
     <>
-      <section className="flex flex-col md:flex-row items-center justify-around p-4">
+      <section className="flex flex-col md:flex-row items-center justify-around p-4 mt-20">
         <div className="w-full md:w-1/3 p-2">
           <Image
             src={image}
             alt="Image 1"
             width={500}
             height={300}
-            className="object-cover rounded-lg shadow-md"
+            className="object-cover rounded-lg shadow-md w-full h-auto"
             priority
           />
         </div>
         <div className="w-full md:w-1/3 p-2 text-center">
-          <p className="text-lg md:text-xl lg:text-2xl font-semibold">
+          <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed">
             In the graceful lines etched by time, I find a beauty that
             transcends youth—a beauty that speaks of wisdom gained, stories
             lived, and memories cherished. Through my photography, I seek to
@@ -33,7 +33,7 @@ const Beauty = () => {
             alt="Image 2"
             width={500}
             height={300}
-            className="object-cover rounded-lg shadow-md"
+            className="object-cover rounded-lg shadow-md w-full h-auto"
             priority
           />
         </div>
@@ -43,20 +43,20 @@ const Beauty = () => {
           <div className="w-full md:w-1/2 p-2">
             <Image
               src={image3}
-              alt="Image 1"
+              alt="Image 3"
               width={400}
               height={200}
-              className="object-cover rounded-lg shadow-md"
+              className="object-cover rounded-lg shadow-md w-full h-auto"
               priority
             />
           </div>
           <div className="w-full md:w-1/2 p-2">
             <Image
               src={image4}
-              alt="Image 2"
+              alt="Image 4"
               width={400}
               height={200}
-              className="object-cover rounded-lg shadow-md"
+              className="object-cover rounded-lg shadow-md w-full h-auto"
               priority
             />
           </div>

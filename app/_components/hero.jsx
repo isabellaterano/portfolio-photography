@@ -5,15 +5,15 @@ import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
   return (
-    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
-      <div>
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
-          Hey, I am Jonathan Locker
+    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto min-h-dvh">
+      <div className="mt-20 md:mt-0">
+        <span className="block mb-4 text-lg md:text-2xl font-medium text-gray-600">
+          Hi, I am Jonathan Locker
         </span>
-        <h3 className="text-4xl md:text-6xl font-semibold mb-8 uppercase">
+        <h3 className="text-4xl md:text-6xl font-extrabold mb-8 uppercase tracking-wide text-black leading-tight">
           Photographer
         </h3>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+        <button className="rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
           <Link href="#contact">Contact me</Link>
         </button>
       </div>

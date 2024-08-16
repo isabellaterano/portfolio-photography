@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { AiOutlineCloseCircle, AiOutlineMenu } from "react-icons/ai";
+import { CgMenuGridR, CgCloseR } from "react-icons/cg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,38 +14,33 @@ export default function Navbar() {
   };
 
   return (
-    <header className="border-b-4 border-stone-100 px-4 mx-4 my-2 py-2">
-      <div className="container mx-auto flex justify-between items-center relative">
-        <div className="text-2xl font-bold">
+    <header className="fixed top-0 w-full border-b-4 border-zinc-900 px-4 py-3 z-50 bg-zinc-100">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-3xl font-bold cursor-pointer">
           <Link href="/">JL</Link>
         </div>
-        <div>
-          <button
-            onClick={toggleMenu}
-            className="focus:outline-none hover:text-gray-400 transition duration-300 ease-in-out relative z-50"
-          >
-            {isOpen ? (
-              <AiOutlineCloseCircle
-                size={30}
-                className="text-stone-800 hover:text-stone-400"
-              />
-            ) : (
-              <AiOutlineMenu size={30} />
-            )}
-          </button>
-        </div>
+        <button
+          onClick={toggleMenu}
+          className="focus:outline-none hover:text-zinc-500 transition duration-300 ease-in-out relative z-50"
+        >
+          {isOpen ? (
+            <CgCloseR size={35} className="text-white hover:text-gray-400" />
+          ) : (
+            <CgMenuGridR size={35} />
+          )}
+        </button>
         <nav
-          className={`fixed top-0 left-0 w-full h-screen flex items-center justify-center bg-stone-200 text-stone-950 opacity-100 transition duration-300 ease-in-out transform ${
-            !isOpen ? "translate-x-full" : "translate-x-0"
+          className={`fixed top-0 left-0 w-full h-screen bg-zinc-900 text-zinc-100 opacity-100 transition-transform duration-500 ease-in-out ${
+            isOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{ zIndex: 40 }}
         >
-          <ul className="flex flex-col gap-10 font-bold">
+          <ul className="flex flex-col items-center justify-center h-full gap-12 font-bold text-2xl uppercase">
             <li>
               <Link
                 href="/"
-                className="block hover:text-gray-400 transition duration-300 ease-in-out text-center text-xl"
                 onClick={handleLinkClick}
+                className="hover:text-zinc-500 transition duration-300 ease-in-out"
               >
                 Home
               </Link>
@@ -53,8 +48,8 @@ export default function Navbar() {
             <li>
               <Link
                 href="/about"
-                className="block hover:text-gray-400 transition duration-300 ease-in-out text-center text-xl"
                 onClick={handleLinkClick}
+                className="hover:text-zinc-500 transition duration-300 ease-in-out"
               >
                 About me
               </Link>
@@ -62,8 +57,8 @@ export default function Navbar() {
             <li>
               <Link
                 href="/#last-projects"
-                className="block hover:text-gray-400 transition duration-300 ease-in-out text-center text-xl"
                 onClick={handleLinkClick}
+                className="hover:text-zinc-500 transition duration-300 ease-in-out"
               >
                 Last Projects
               </Link>
@@ -71,8 +66,8 @@ export default function Navbar() {
             <li>
               <Link
                 href="/#contact"
-                className="block hover:text-gray-400 transition duration-300 ease-in-out text-center text-xl"
                 onClick={handleLinkClick}
+                className="hover:text-zinc-500 transition duration-300 ease-in-out"
               >
                 Contact
               </Link>

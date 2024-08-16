@@ -7,7 +7,7 @@ import image4 from "@/public/bali4.jpg";
 const Bali = () => {
   return (
     <>
-      <section className="flex flex-col md:flex-row items-center justify-around p-4">
+      <section className="flex flex-col md:flex-row items-center justify-around p-4 mt-20">
         <div className="w-full md:w-1/3 p-2">
           <Image
             src={image}
@@ -43,7 +43,7 @@ const Bali = () => {
           <div className="w-full md:w-1/2 p-2">
             <Image
               src={image3}
-              alt="Image 1"
+              alt="Image 3"
               width={500}
               height={300}
               className="object-cover rounded-lg shadow-md"
@@ -53,7 +53,7 @@ const Bali = () => {
           <div className="w-full md:w-1/2 p-2">
             <Image
               src={image4}
-              alt="Image 2"
+              alt="Image 4"
               width={500}
               height={300}
               className="object-cover rounded-lg shadow-md"

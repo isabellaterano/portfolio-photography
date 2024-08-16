@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${lora.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col relative bg-stone-950 text-stone-100`}
+        className={`${lora.className} antialiased bg-zinc-50 text-zinc-950`}
       >
         <Navbar />
-        <div className="flex-1 grid">
-          <main className="max-w-7xl mx-auto w-full">{children}</main>
+        <div className="">
+          <main className="">{children}</main>
         </div>
         <Footer />
       </body>
