@@ -1,8 +1,7 @@
 "use client";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-
 const Hero = () => {
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto min-h-dvh">
@@ -124,17 +123,16 @@ const ShuffleGrid = () => {
   const timeoutRef = useRef(null);
   const [squares, setSquares] = useState(generateSquares());
 
-  useEffect(() => {
-    shuffleSquares();
-
-    return () => clearTimeout(timeoutRef.current);
+  const shuffleSquares = useCallback(() => {
+    setSquares(generateSquares());
+    timeoutRef.current = setTimeout(shuffleSquares, 3000);
   }, []);
 
-  const shuffleSquares = () => {
-    setSquares(generateSquares());
+  useEffect(() => {
+    shuffleSquares();
+    return () => clearTimeout(timeoutRef.current);
+  }, [shuffleSquares]);
 
-    timeoutRef.current = setTimeout(shuffleSquares, 3000);
-  };
   return (
     <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
       {squares.map((sq) => sq)}

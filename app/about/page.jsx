@@ -22,8 +22,9 @@ export default function About() {
             Hi, I&apos;m Jasper Everett, a passionate photographer with a love
             for capturing life&apos;s most beautiful moments. I specialize in
             portrait, landscape, and event photography. My journey into
-            photography began at a young age, and over the years, I’ve developed
-            a unique style that blends creativity with technical expertise.
+            photography began at a young age, and over the years, I&apos; ve
+            developed a unique style that blends creativity with technical
+            expertise.
           </p>
           <p className="text-gray-600 mt-4">
             Through my lens, I aim to tell stories that resonate with people and

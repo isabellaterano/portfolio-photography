@@ -9,25 +9,13 @@ export default function Footer() {
           <p className="text-sm mt-1">Capturing moments, creating memories.</p>
         </div>
         <div className="mt-4 md:mt-0 flex space-x-6">
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white"
-            whileHover={{ scale: 1.1 }}
-          >
+          <a href="#" className="text-gray-400 hover:text-white">
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white"
-            whileHover={{ scale: 1.1 }}
-          >
+          <a href="#" className="text-gray-400 hover:text-white">
             <FaBehance className="w-6 h-6" />
           </a>
-          <a
-            href="#"
-            className="text-gray-400 hover:text-white"
-            whileHover={{ scale: 1.1 }}
-          >
+          <a href="#" className="text-gray-400 hover:text-white">
             <FaFacebook className="w-6 h-6" />
           </a>
         </div>
