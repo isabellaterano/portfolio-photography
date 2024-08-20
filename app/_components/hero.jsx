@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 const Hero = () => {
   return (
-    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto min-h-dvh">
-      <div className="mt-20 md:mt-0">
+    <section className="w-full px-8 py-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 max-w-6xl mx-auto min-h-dvh">
+      <div className="mt-20 md:mt-28 lg:mt-0">
         <span className="block mb-4 text-lg md:text-2xl font-medium text-gray-600">
           Hi, I am Jonathan Locker
         </span>
